@@ -44,3 +44,9 @@ export const employees: Employee[] = [
         salary: 400000
     }
 ];
+
+
+export const payroll = () => {
+    return employees.reduce((total,em)=>total + em.salary,0);
+}
+export const mvpEmployee = employees.reduce((max, current) => { return (current.salary > max.salary) ? current : max });
