@@ -8,6 +8,6 @@ export interface Employee{
     phone:string,
     area:string,
     photo_url:string,
-    salary:number
-    
+    salary:number,
+    genre:string
 }
