@@ -6,9 +6,9 @@ import { Employee } from '@/app/utils/definitions';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function AreaGraph({ employees }: { employees: Employee[] }) {
-    
+
     const employeesPerArea = new Map<string, number>();
-    
+
     employees.forEach((em) => {
         const currentCount = employeesPerArea.get(em.area) || 0;
         employeesPerArea.set(em.area, currentCount + 1);
@@ -18,15 +18,15 @@ export default function AreaGraph({ employees }: { employees: Employee[] }) {
     const values = Array.from(employeesPerArea.values());
 
     const backgroundColors = [
-        'rgba(255, 99, 132, 0.6)',    
-        'rgba(54, 162, 235, 0.6)',    
-        'rgba(255, 206, 86, 0.6)',    
-        'rgba(75, 192, 192, 0.6)',    
-        'rgba(153, 102, 255, 0.6)',  
-        'rgba(255, 159, 64, 0.6)',   
-        'rgba(199, 199, 199, 0.6)',  
-        'rgba(83, 102, 255, 0.6)',    
-        'rgba(40, 159, 64, 0.6)',     
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)',
+        'rgba(199, 199, 199, 0.6)',
+        'rgba(83, 102, 255, 0.6)',
+        'rgba(40, 159, 64, 0.6)',
     ];
 
     const borderColors = [
@@ -47,9 +47,9 @@ export default function AreaGraph({ employees }: { employees: Employee[] }) {
             {
                 label: '# of Employees',
                 data: values,
-                backgroundColor: backgroundColors.slice(0, labels.length), 
+                backgroundColor: backgroundColors.slice(0, labels.length),
                 borderColor: borderColors.slice(0, labels.length),
-                borderWidth: 1, 
+                borderWidth: 1,
             },
         ],
     };
@@ -58,7 +58,7 @@ export default function AreaGraph({ employees }: { employees: Employee[] }) {
         responsive: true,
         plugins: {
             legend: {
-                position: 'bottom' as const, 
+                position: 'bottom' as const,
             },
         },
     };

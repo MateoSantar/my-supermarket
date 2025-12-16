@@ -1,11 +1,13 @@
 
 import { employees, payroll, mvpEmployee, salaryAverage } from "@/app/lib/data";
-import { jost, barlow } from "@/app/utils/fonts";
+import { barlow } from "@/app/utils/fonts";
 import { UserGroupIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import GenreGraph from "@/app/ui/employees/GenreGraph";
 import EmployeesTable from "@/app/ui/employees/EmployeesTable";
 import AreaGraph from "@/app/ui/employees/AreaGraph";
+import PayPerArea from "@/app/ui/employees/payPerArea";
+import MeetingsCalendar from "@/app/ui/employees/ShiftCalendar";
+import ShiftCalendar from "@/app/ui/employees/ShiftCalendar";
 
 export default async function Employees() {
 
@@ -33,7 +35,7 @@ export default async function Employees() {
                     </div>
                 </div>
                 { /* https://www.slideteam.net/wp/wp-content/uploads/2024/01/Employee-leave-tracker-dashboard-with-upcoming-schedule-.png */}
-                <div className="flex flex-col md:flex-row items-center md:items-start  justify-center md:justify-between">
+                <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between">
                     <div>
                         <h1 className="text-4xl text-center">Genre distribution</h1>
                         <GenreGraph employees={employees} />
@@ -42,11 +44,19 @@ export default async function Employees() {
                         <h1 className="text-4xl text-center">Area employees distribution</h1>
                         <AreaGraph employees={employees} />
                     </div>
-
+                </div>
+                <div className="flex flex-col w-full flex-start">
+                    <h1 className="text-4xl text-center">Payroll  distribution</h1>
+                    <PayPerArea employees={employees} />
                 </div>
 
             </section>
-            <EmployeesTable employees={employees} />
+            <section className="w-full flex flex-col gap-10">
+                    <EmployeesTable employees={employees} />
+                    <ShiftCalendar/>
+
+            </section>
+            
         </div>
 
     );
