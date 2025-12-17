@@ -14,7 +14,7 @@ export default function EmployeesTable({ employees }: { employees: Employee[] })
     );
 
     return (
-        <section className="bg-green-100 rounded shadow-sm border-1 border-green-500 overflow-hidden h-[500px] flex flex-col ">
+        <section className="bg-green-100 rounded shadow-sm border-1 border-green-500 overflow-hidden h-[550px] flex flex-col ">
             <div className="p-4 bg-green-200 border-b border-green-300 flex items-center gap-2 sticky top-0 z-20">
                 <MagnifyingGlassIcon className="w-5 h-5 text-green-700" />
                 <input

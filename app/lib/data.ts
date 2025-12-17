@@ -1,4 +1,4 @@
-import { Employee } from "@/app/utils/definitions";
+import { Employee, Meeting } from "@/app/utils/definitions";
 
 export const employees: Employee[] = [
     {
@@ -172,3 +172,47 @@ export const mvpEmployee = employees.reduce((max, current) => {
 });
 
 export const salaryAverage = (payroll() / employees.length).toFixed(0);
+
+export const upcomingMeetings: Meeting[] = [
+    {
+        employee: employees[0].name,
+        day: new Date('2025-12-18'),
+        hour: 9,
+        minute: 30
+    },
+    {
+        employee: employees[1].name,
+        day: new Date('2025-12-18'),
+        hour: 11,
+        minute: 0
+    },
+    {
+        employee: employees[3].name,
+        day: new Date('2025-12-19'),
+        hour: 14,
+        minute: 15
+    },
+    {
+        employee: employees[2].name,
+        day: new Date('2025-12-19'),
+        hour: 16,
+        minute: 45
+    },
+    {
+        employee: employees[5].name,
+        day: new Date('2025-12-20'),
+        hour: 10,
+        minute: 0
+    },{
+        employee: employees[7].name,
+        day: new Date('2025-12-19'),
+        hour: 16,
+        minute: 45
+    }
+    ,{
+        employee: employees[6].name,
+        day: new Date('2025-12-19'),
+        hour: 16,
+        minute: 45
+    }
+];

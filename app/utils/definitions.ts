@@ -11,3 +11,10 @@ export interface Employee{
     salary:number,
     genre:string
 }
+
+export interface Meeting{
+    employee:string,
+    day:Date,
+    hour:number,
+    minute:number
+}

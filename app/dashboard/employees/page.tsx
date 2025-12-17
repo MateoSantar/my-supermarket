@@ -1,12 +1,11 @@
 
-import { employees, payroll, mvpEmployee, salaryAverage } from "@/app/lib/data";
+import { employees, payroll, mvpEmployee, salaryAverage,upcomingMeetings } from "@/app/lib/data";
 import { barlow } from "@/app/utils/fonts";
 import { UserGroupIcon } from "@heroicons/react/24/outline";
 import GenreGraph from "@/app/ui/employees/GenreGraph";
 import EmployeesTable from "@/app/ui/employees/EmployeesTable";
 import AreaGraph from "@/app/ui/employees/AreaGraph";
 import PayPerArea from "@/app/ui/employees/payPerArea";
-import MeetingsCalendar from "@/app/ui/employees/ShiftCalendar";
 import ShiftCalendar from "@/app/ui/employees/ShiftCalendar";
 
 export default async function Employees() {
@@ -51,9 +50,9 @@ export default async function Employees() {
                 </div>
 
             </section>
-            <section className="w-full flex flex-col gap-10">
+            <section className="w-full flex flex-col gap-5">
                     <EmployeesTable employees={employees} />
-                    <ShiftCalendar/>
+                    <ShiftCalendar meetings={upcomingMeetings}/>
 
             </section>
             
