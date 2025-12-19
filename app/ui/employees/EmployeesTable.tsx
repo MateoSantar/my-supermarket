@@ -5,12 +5,17 @@ import Image from "next/image";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Employee } from "@/app/utils/definitions";
 
-export default function EmployeesTable({ employees }: { employees: Employee[] }) {
+export default function EmployeesTable({
+    employees,
+}: {
+    employees: Employee[];
+}) {
     const [searchTerm, setSearchTerm] = useState("");
 
-    const filteredEmployees = employees.filter((e) =>
-        e.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        e.area.toLowerCase().includes(searchTerm.toLowerCase())
+    const filteredEmployees = employees.filter(
+        (e) =>
+            e.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            e.area.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     return (
@@ -29,17 +34,30 @@ export default function EmployeesTable({ employees }: { employees: Employee[] })
                 <table className="border-separate border-spacing-y-3 w-full p-2">
                     <thead className="sticky top-0 z-10 bg-green-100 shadow-sm">
                         <tr>
-                            <th className="p-2 text-left text-green-800">Name</th>
-                            <th className="p-2 text-left text-green-800">Phone</th>
-                            <th className="p-2 text-left text-green-800">Area</th>
-                            <th className="p-2 text-center text-green-800">Photo</th>
-                            <th className="p-2 text-left text-green-800">Salary</th>
+                            <th className="p-2 text-left text-green-800">
+                                Name
+                            </th>
+                            <th className="p-2 text-left text-green-800">
+                                Phone
+                            </th>
+                            <th className="p-2 text-left text-green-800">
+                                Area
+                            </th>
+                            <th className="p-2 text-center text-green-800">
+                                Photo
+                            </th>
+                            <th className="p-2 text-left text-green-800">
+                                Salary
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
                         {filteredEmployees.length > 0 ? (
                             filteredEmployees.map((e) => (
-                                <tr key={e.name} className="bg-white shadow-sm hover:bg-green-50 transition-colors">
+                                <tr
+                                    key={e.name}
+                                    className="bg-white shadow-sm hover:bg-green-50 transition-colors"
+                                >
                                     <td className="p-3 border-y border-l border-green-200 rounded-l-lg font-medium">
                                         {e.name}
                                     </td>
@@ -67,7 +85,10 @@ export default function EmployeesTable({ employees }: { employees: Employee[] })
                             ))
                         ) : (
                             <tr>
-                                <td colSpan={5} className="text-center p-10 text-gray-500">
+                                <td
+                                    colSpan={5}
+                                    className="text-center p-10 text-gray-500"
+                                >
                                     No se encontraron empleados.
                                 </td>
                             </tr>

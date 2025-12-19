@@ -1,13 +1,19 @@
-import { Employee, Meeting } from "@/app/utils/definitions";
+import {
+    Employee,
+    Meeting,
+    ProductArea,
+    Product,
+    Sale,
+} from "@/app/utils/definitions";
 
 export const employees: Employee[] = [
     {
-        name: "Carlos Rodríguez",
+        name: "Jorge Rodríguez",
         phone: "+54 11 4567-8901",
         area: "Cajas",
-        photo_url: "https://randomuser.me/api/portraits/men/1.jpg",
+        photo_url: "https://i.ibb.co/35t9Mz5N/Jorge.png",
         salary: 450000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Lucía Fernández",
@@ -15,7 +21,7 @@ export const employees: Employee[] = [
         area: "Fiambrería",
         photo_url: "https://randomuser.me/api/portraits/women/2.jpg",
         salary: 480000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Marcos Galperin",
@@ -23,7 +29,7 @@ export const employees: Employee[] = [
         area: "Depósito",
         photo_url: "https://randomuser.me/api/portraits/men/3.jpg",
         salary: 420000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Valeria Gómez",
@@ -31,7 +37,7 @@ export const employees: Employee[] = [
         area: "Administración",
         photo_url: "https://randomuser.me/api/portraits/women/4.jpg",
         salary: 600000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Martín Sosa",
@@ -39,7 +45,7 @@ export const employees: Employee[] = [
         area: "Verdulería",
         photo_url: "https://randomuser.me/api/portraits/men/5.jpg",
         salary: 440000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Elena Ruiz",
@@ -47,7 +53,7 @@ export const employees: Employee[] = [
         area: "Limpieza",
         photo_url: "https://randomuser.me/api/portraits/women/6.jpg",
         salary: 400000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Roberto Díaz",
@@ -55,7 +61,7 @@ export const employees: Employee[] = [
         area: "Carnicería",
         photo_url: "https://randomuser.me/api/portraits/men/7.jpg",
         salary: 520000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Sofía Martínez",
@@ -63,7 +69,7 @@ export const employees: Employee[] = [
         area: "Panadería",
         photo_url: "https://randomuser.me/api/portraits/women/8.jpg",
         salary: 490000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Jorge Romero",
@@ -71,7 +77,7 @@ export const employees: Employee[] = [
         area: "Seguridad",
         photo_url: "https://randomuser.me/api/portraits/men/9.jpg",
         salary: 430000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Valentina López",
@@ -79,7 +85,7 @@ export const employees: Employee[] = [
         area: "Cajas",
         photo_url: "https://randomuser.me/api/portraits/women/10.jpg",
         salary: 450000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Lucas Méndez",
@@ -87,7 +93,7 @@ export const employees: Employee[] = [
         area: "Reposición",
         photo_url: "https://randomuser.me/api/portraits/men/11.jpg",
         salary: 410000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Patricia Vega",
@@ -95,7 +101,7 @@ export const employees: Employee[] = [
         area: "Gerencia",
         photo_url: "https://randomuser.me/api/portraits/women/12.jpg",
         salary: 950000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Fernando Torres",
@@ -103,7 +109,7 @@ export const employees: Employee[] = [
         area: "Depósito",
         photo_url: "https://randomuser.me/api/portraits/men/13.jpg",
         salary: 425000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Camila Ocampo",
@@ -111,7 +117,7 @@ export const employees: Employee[] = [
         area: "Recursos Humanos",
         photo_url: "https://randomuser.me/api/portraits/women/14.jpg",
         salary: 620000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Ricardo Alarcón",
@@ -119,7 +125,7 @@ export const employees: Employee[] = [
         area: "Carnicería",
         photo_url: "https://randomuser.me/api/portraits/men/15.jpg",
         salary: 510000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Marina Duarte",
@@ -127,7 +133,7 @@ export const employees: Employee[] = [
         area: "Panadería",
         photo_url: "https://randomuser.me/api/portraits/women/16.jpg",
         salary: 485000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Gustavo Silva",
@@ -135,7 +141,7 @@ export const employees: Employee[] = [
         area: "Mantenimiento",
         photo_url: "https://randomuser.me/api/portraits/men/17.jpg",
         salary: 460000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Ana Clara Rossi",
@@ -143,7 +149,7 @@ export const employees: Employee[] = [
         area: "Marketing",
         photo_url: "https://randomuser.me/api/portraits/women/18.jpg",
         salary: 580000,
-        genre: "F"
+        genre: "F",
     },
     {
         name: "Julián Álvarez",
@@ -151,7 +157,7 @@ export const employees: Employee[] = [
         area: "Reposición",
         photo_url: "https://randomuser.me/api/portraits/men/19.jpg",
         salary: 410000,
-        genre: "M"
+        genre: "M",
     },
     {
         name: "Teresa Collado",
@@ -159,16 +165,16 @@ export const employees: Employee[] = [
         area: "Limpieza",
         photo_url: "https://randomuser.me/api/portraits/women/20.jpg",
         salary: 400000,
-        genre: "F"
-    }
+        genre: "F",
+    },
 ];
 
 export const payroll = () => {
     return employees.reduce((total, em) => total + em.salary, 0);
-}
+};
 
-export const mvpEmployee = employees.reduce((max, current) => { 
-    return (current.salary > max.salary) ? current : max 
+export const mvpEmployee = employees.reduce((max, current) => {
+    return current.salary > max.salary ? current : max;
 });
 
 export const salaryAverage = (payroll() / employees.length).toFixed(0);
@@ -176,43 +182,201 @@ export const salaryAverage = (payroll() / employees.length).toFixed(0);
 export const upcomingMeetings: Meeting[] = [
     {
         employee: employees[0].name,
-        day: new Date('2025-12-18'),
+        day: new Date("2025-12-18"),
         hour: 9,
-        minute: 30
+        minute: 30,
     },
     {
         employee: employees[1].name,
-        day: new Date('2025-12-18'),
+        day: new Date("2025-12-18"),
         hour: 11,
-        minute: 0
+        minute: 0,
     },
     {
         employee: employees[3].name,
-        day: new Date('2025-12-19'),
+        day: new Date("2025-12-19"),
         hour: 14,
-        minute: 15
+        minute: 15,
     },
     {
         employee: employees[2].name,
-        day: new Date('2025-12-19'),
+        day: new Date("2025-12-19"),
         hour: 16,
-        minute: 45
+        minute: 45,
     },
     {
         employee: employees[5].name,
-        day: new Date('2025-12-20'),
+        day: new Date("2025-12-20"),
         hour: 10,
-        minute: 0
-    },{
+        minute: 0,
+    },
+    {
         employee: employees[7].name,
-        day: new Date('2025-12-19'),
+        day: new Date("2025-12-19"),
         hour: 16,
-        minute: 45
-    }
-    ,{
+        minute: 45,
+    },
+    {
         employee: employees[6].name,
-        day: new Date('2025-12-19'),
+        day: new Date("2025-12-19"),
         hour: 16,
-        minute: 45
-    }
+        minute: 45,
+    },
+];
+
+export const productAreas: ProductArea[] = [
+    { id: 1, name: "Perecederos" },
+    { id: 2, name: "No Perecederos" },
+    { id: 3, name: "Bebidas" },
+    { id: 4, name: "Congelados" },
+    { id: 5, name: "Cuidado Personal y Limpieza" },
+    { id: 6, name: "Bazar" },
+    { id: 7, name: "Otros" },
+];
+
+export const products: Product[] = [
+    {
+        id: 101,
+        name: "Leche Entera La Serenísima 1L",
+        area: productAreas[0],
+        price: 1450,
+        hasDiscount: false,
+        discount: 0,
+        stock: 45, 
+    },
+    {
+        id: 102,
+        name: "Arroz Gallo Oro 1kg",
+        area: productAreas[1],
+        price: 1800,
+        hasDiscount: true,
+        discount: 15,
+        stock: 120,
+    },
+    {
+        id: 103,
+        name: "Coca-Cola Sabor Original 2.25L",
+        area: productAreas[2],
+        price: 2900,
+        hasDiscount: false,
+        discount: 0,
+        stock: 80,
+    },
+    {
+        id: 104,
+        name: "Hamburguesas Paty Clásicas x4",
+        area: productAreas[3],
+        price: 4500,
+        hasDiscount: true,
+        discount: 10,
+        stock: 35,
+    },
+    {
+        id: 105,
+        name: "Detergente Magistral Limón 500ml",
+        area: productAreas[4],
+        price: 2200,
+        hasDiscount: false,
+        discount: 0,
+        stock: 60,
+    },
+    {
+        id: 106,
+        name: "Queso Crema Casancrem 300g",
+        area: productAreas[0],
+        price: 3100,
+        hasDiscount: true,
+        discount: 5,
+        stock: 25,
+    },
+    {
+        id: 107,
+        name: "Fideos Matarazzo Tirabuzón 500g",
+        area: productAreas[1],
+        price: 1350,
+        hasDiscount: false,
+        discount: 0,
+        stock: 150,
+    },
+    {
+        id: 108,
+        name: "Vino Malbec Rutini 750ml",
+        area: productAreas[2],
+        price: 12500,
+        hasDiscount: true,
+        discount: 20,
+        stock: 12,
+    },
+    {
+        id: 109,
+        name: "Shampoo Pantene Restauración 400ml",
+        area: productAreas[4],
+        price: 5800,
+        hasDiscount: false,
+        discount: 0,
+        stock: 40,
+    },
+    {
+        id: 110,
+        name: "Set de Tuppers x3",
+        area: productAreas[5],
+        price: 8500,
+        hasDiscount: true,
+        discount: 30,
+        stock: 15,
+    },
+    {
+        id: 111,
+        name: "Helado NotCream Chocolate 300g",
+        area: productAreas[3],
+        price: 6200,
+        hasDiscount: false,
+        discount: 0,
+        stock: 20,
+    },
+    {
+        id: 112,
+        name: "Alimento para Perros DogChow 3kg",
+        area: productAreas[6],
+        price: 14000,
+        hasDiscount: true,
+        discount: 10,
+        stock: 10,
+    },
+    {
+        id: 113,
+        name: "Pan Lactal Artesano 500g",
+        area: productAreas[0],
+        price: 2800,
+        hasDiscount: false,
+        discount: 0,
+        stock: 30,
+    },
+    {
+        id: 114,
+        name: "Cerveza Patagonia Amber Lager 730ml",
+        area: productAreas[2],
+        price: 3600,
+        hasDiscount: true,
+        discount: 15,
+        stock: 55,
+    },
+    {
+        id: 115,
+        name: "Papel Higiénico Higienol 80m x4",
+        area: productAreas[4],
+        price: 4200,
+        hasDiscount: false,
+        discount: 0,
+        stock: 100,
+    },
+];
+
+export const sales: Sale[] = [
+    { product: products[0], quantity: 5 },
+    { product: products[2], quantity: 12 },
+    { product: products[7], quantity: 1 },
+    { product: products[4], quantity: 4 },
+    { product: products[14], quantity: 10 },
+    { product: products[1], quantity: 20 },
 ];

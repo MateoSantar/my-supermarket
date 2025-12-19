@@ -20,8 +20,8 @@ export default function ShiftCalendar({meetings}:{meetings:Meeting[]}) {
 
 function MeetingFrame({meeting}:{meeting:Meeting}){
     return (
-        <div className="bg-white p-3 py-4 rounded shadow-sm border-1 border-green-100 flex flex-row gap-8">
-            <h2>{meeting.day.toLocaleDateString()} <span className="ml-3">{formatMeetingTime(meeting.hour,meeting.minute)}</span> </h2>
+        <div className="bg-white p-3 py-4 rounded shadow-sm border-1 border-green-100 flex flex-row gap-5">
+            <h2 className="flex flex-row gap-4">{meeting.day.toLocaleDateString()} <span >{formatMeetingTime(meeting.hour,meeting.minute)}</span> </h2>
             <h2 className="text-md">{meeting.employee}</h2>
         </div>
     );

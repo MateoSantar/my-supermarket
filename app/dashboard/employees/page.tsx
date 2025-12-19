@@ -5,7 +5,7 @@ import { UserGroupIcon } from "@heroicons/react/24/outline";
 import GenreGraph from "@/app/ui/employees/GenreGraph";
 import EmployeesTable from "@/app/ui/employees/EmployeesTable";
 import AreaGraph from "@/app/ui/employees/AreaGraph";
-import PayPerArea from "@/app/ui/employees/payPerArea";
+import PayPerArea from "@/app/ui/employees/PayPerArea";
 import ShiftCalendar from "@/app/ui/employees/ShiftCalendar";
 
 export default async function Employees() {
