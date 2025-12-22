@@ -4,6 +4,7 @@ import {
     ProductArea,
     Product,
     Sale,
+    Delivery,
 } from "@/app/utils/definitions";
 
 export const employees: Employee[] = [
@@ -379,4 +380,128 @@ export const sales: Sale[] = [
     { product: products[4], quantity: 4 },
     { product: products[14], quantity: 10 },
     { product: products[1], quantity: 20 },
+];
+
+export const deliveries: Delivery[] = [
+    {
+        id: 1,
+        product: products[0],
+        quantity: 50,
+        deliveryDate: new Date("2025-12-20"),
+        supplier: "Lácteos del Sur",
+        status: "Entregado",
+    },
+    {
+        id: 2,
+        product: products[1],
+        quantity: 100,
+        deliveryDate: new Date("2025-12-21"),
+        supplier: "Arrozales Argentinos",
+        status: "Pendiente",
+    },
+    {
+        id: 3,
+        product: products[3],
+        quantity: 40,
+        deliveryDate: new Date("2025-12-22"),
+        supplier: "Congelados Premium",
+        status: "En tránsito",
+    },
+    {
+        id: 4,
+        product: products[8],
+        quantity: 30,
+        deliveryDate: new Date("2025-12-23"),
+        supplier: "Higiene Total",
+        status: "Entregado",
+    },
+    {
+        id: 5,
+        product: products[11],
+        quantity: 20,
+        deliveryDate: new Date("2025-12-24"),
+        supplier: "Distribuidora Nacional",
+        status: "Pendiente",
+    },
+    // --- Nuevos Deliveries ---
+    {
+        id: 6,
+        product: products[2], // Coca-Cola
+        quantity: 150,
+        deliveryDate: new Date("2025-12-26"),
+        supplier: "Bebidas del Atlántico",
+        status: "En tránsito",
+    },
+    {
+        id: 7,
+        product: products[7], // Vino Malbec
+        quantity: 24,
+        deliveryDate: new Date("2025-12-27"),
+        supplier: "Bodegas Mendocinas",
+        status: "Pendiente",
+    },
+    {
+        id: 8,
+        product: products[14], // Papel Higiénico
+        quantity: 200,
+        deliveryDate: new Date("2025-12-15"),
+        supplier: "Higiene Total",
+        status: "Entregado",
+    },
+    {
+        id: 9,
+        product: products[4], // Detergente
+        quantity: 80,
+        deliveryDate: new Date("2025-12-28"),
+        supplier: "Limpieza Express",
+        status: "Pendiente",
+    },
+    {
+        id: 10,
+        product: products[6], // Fideos
+        quantity: 300,
+        deliveryDate: new Date("2025-12-29"),
+        supplier: "Molinos del Norte",
+        status: "En tránsito",
+    },
+    {
+        id: 11,
+        product: products[10], // Helado
+        quantity: 60,
+        deliveryDate: new Date("2025-12-30"),
+        supplier: "Congelados Premium",
+        status: "Pendiente",
+    },
+    {
+        id: 12,
+        product: products[13], // Cerveza Patagonia
+        quantity: 120,
+        deliveryDate: new Date("2025-12-18"),
+        supplier: "Bebidas del Atlántico",
+        status: "Entregado",
+    },
+    {
+        id: 13,
+        product: products[9], // Tuppers
+        quantity: 45,
+        deliveryDate: new Date("2025-12-22"),
+        supplier: "Bazar Moderno",
+        status: "En tránsito",
+    },
+    {
+        id: 14,
+        product: products[12], // Pan Lactal
+        quantity: 90,
+        deliveryDate: new Date("2025-12-20"),
+        supplier: "Panificadora Central",
+        status: "Entregado",
+    },
+    {
+        id: 15,
+        product: products[5], // Casancrem
+        quantity: 40,
+        deliveryDate: new Date("2025-12-31"),
+        supplier: "Lácteos del Sur",
+        status: "Pendiente",
+    }
 ];

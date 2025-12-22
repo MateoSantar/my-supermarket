@@ -38,3 +38,12 @@ export interface Sale {
     product: Product;
     quantity: number;
 }
+
+export interface Delivery{
+    id:number;
+    product:Product;
+    quantity:number;
+    deliveryDate:Date;
+    supplier:string;
+    status: "Entregado" | "Pendiente" | "En tránsito";
+}
