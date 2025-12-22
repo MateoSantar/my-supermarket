@@ -505,3 +505,5 @@ export const deliveries: Delivery[] = [
         status: "Pendiente",
     }
 ];
+
+export const users = []

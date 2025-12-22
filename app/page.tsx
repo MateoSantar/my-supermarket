@@ -1,18 +1,9 @@
-'use client';
-import Dashboard from "./dashboard/page";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import Login from "@/app/login/page";
 
 export default function Home() {
-  const router = useRouter();
-  useEffect(
-    ()=>{
-      router.push("/dashboard");
-    }
-  );
   return (
-    <div>
-      <Dashboard/>
+    <div className="flex flex-row h-full justify-center items-center">
+      <Login/>
     </div>
   );
 }

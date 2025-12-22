@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NextAuthProviders from "./components/Providers";
 
 
 
@@ -19,7 +20,9 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        {children}
+        <NextAuthProviders>
+          {children}
+        </NextAuthProviders>
       </body>
     </html>
   );
