@@ -5,6 +5,7 @@ import {
     Product,
     Sale,
     Delivery,
+    User,
 } from "@/app/utils/definitions";
 
 export const employees: Employee[] = [
@@ -243,7 +244,7 @@ export const products: Product[] = [
         price: 1450,
         hasDiscount: false,
         discount: 0,
-        stock: 45, 
+        stock: 45,
     },
     {
         id: 102,
@@ -503,7 +504,43 @@ export const deliveries: Delivery[] = [
         deliveryDate: new Date("2025-12-31"),
         supplier: "Lácteos del Sur",
         status: "Pendiente",
-    }
+    },
 ];
 
-export const users = []
+export const users: User[] = [
+    {
+        id: 1,
+        email: "testUser1@gmail.com",
+        name: "Usuario 1",
+        password: "password123",
+        role: "user",
+    },
+    {
+        id: 2,
+        email: "admin@empresa.com",
+        name: "Admin Sistema",
+        password: "adminSystem123",
+        role: "admin",
+    },
+    {
+        id: 3,
+        email: "lucia.dev@gmail.com",
+        name: "Lucía García",
+        password: "securePass2024!",
+        role: "user",
+    },
+    {
+        id: 4,
+        email: "m.rodriguez@tech.io",
+        name: "Marcos Rodríguez",
+        password: "user.9876",
+        role: "user",
+    },
+    {
+        id: 5,
+        email: "super.user@admin.com",
+        name: "Super Usuario",
+        password: "admin_password_strong",
+        role: "admin",
+    }
+];

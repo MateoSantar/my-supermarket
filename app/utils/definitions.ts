@@ -47,3 +47,11 @@ export interface Delivery{
     supplier:string;
     status: "Entregado" | "Pendiente" | "En tránsito";
 }
+
+export interface User{
+    id:number;
+    name:string;
+    email:string;
+    password:string;
+    role: "user" | "admin"; 
+}
